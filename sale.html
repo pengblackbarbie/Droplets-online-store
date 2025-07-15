@@ -4,41 +4,83 @@
   <meta charset="UTF-8" />
   <title>Sale — Droplets</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Font Awesome for icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <!-- Navbar -->
   <header class="navbar">
-    <div class="logo">DROPLETS</div>
-    <nav class="nav-icons">
-      <a href="index.html">🏠 Home</a>
-      <a href="checkout.html">🛒 Cart</a>
+    <div class="logo-container">
+      <img src="images/logo.jpeg" alt="Droplets Logo" class="logo-img" />
+      <div class="logo">DROPLETS</div>
+    </div>
+    <nav class="nav-icons" id="navLinks">
+      <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+      <a href="collection.html"><i class="fa-solid fa-bag-shopping"></i> Collection</a>
+      <a href="sale.html"><i class="fa-solid fa-fire"></i> Sale</a>
+      <a href="product.html"><i class="fa-solid fa-shirt"></i> Product</a>
+      <a href="checkout.html"><i class="fa-solid fa-cart-shopping"></i> Cart <span id="cart-count">0</span></a>
+      <a href="extras.html"><i class="fa-solid fa-file-lines"></i> Extras</a>
     </nav>
+    <button id="menuToggle" class="menu-toggle">☰</button>
   </header>
 
   <!-- Sale Section -->
   <section style="padding: 2em;">
-    <h2>🔥 Sale Zone</h2>
-    <p style="margin-bottom: 1em;">Grab these deals while they last. Limited stock!</p>
+    <h2><i class="fa-solid fa-fire"></i> Sale Zone</h2>
+    <p class="sale-intro">Grab these deals while they last. Limited stock!</p>
+
 
     <div class="tile-grid">
-      <a href="product.html" class="tile">
-        <img src="assets/sale1.jpg" alt="Drip Tracksuit" />
+      <div class="tile">
+        <img src="images/sale-img.jpeg" alt="Drip Tracksuit" />
         <span>Drip Tracksuit — <del>R999</del> R699 <strong class="tag">Hot</strong></span>
-      </a>
-      <a href="product.html" class="tile">
-        <img src="assets/sale2.jpg" alt="Retro Windbreaker" />
+        <button 
+          class="add-to-cart" 
+          data-name="Drip Tracksuit" 
+          data-price="699" 
+          data-image="images/logo.jpeg"
+        >Add to Cart</button>
+      </div>
+
+      <div class="tile">
+        <img src="images/sale.png" alt="Retro Windbreaker" />
         <span>Retro Windbreaker — <del>R850</del> R590 <strong class="tag">Limited</strong></span>
-      </a>
-      <a href="product.html" class="tile">
-        <img src="assets/sale3.jpg" alt="Tie-Dye Tee" />
+        <button 
+          class="add-to-cart" 
+          data-name="Retro Windbreaker" 
+          data-price="590" 
+          data-image="images/logo.jpeg"
+        >Add to Cart</button>
+      </div>
+
+      <div class="tile">
+        <img src="images/sale-img.jpeg" alt="Tie-Dye Tee" />
         <span>Tie-Dye Tee — <del>R399</del> R279</span>
-      </a>
-      <a href="product.html" class="tile">
-        <img src="assets/sale4.jpg" alt="Platform Sneakers" />
+        <button 
+          class="add-to-cart" 
+          data-name="Tie-Dye Tee" 
+          data-price="279" 
+          data-image="images/logo.jpeg"
+        >Add to Cart</button>
+      </div>
+
+      <div class="tile">
+        <img src="images/sale.png" alt="Platform Sneakers" />
         <span>Platform Sneakers — <del>R1100</del> R899</span>
-      </a>
+        <button 
+          class="add-to-cart" 
+          data-name="Platform Sneakers" 
+          data-price="899" 
+          data-image="images/logo.jpeg"
+        >Add to Cart</button>
+      </div>
     </div>
   </section>
 
@@ -46,6 +88,6 @@
     <p>&copy; 2025 Droplets. All rights reserved.</p>
   </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
-

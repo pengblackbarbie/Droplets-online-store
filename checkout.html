@@ -8,18 +8,33 @@
 </head>
 <body>
 
+  <!-- Navbar -->
   <header class="navbar">
-    <div class="logo">DROPLETS</div>
-    <nav class="nav-icons">
+    <div class="logo-container">
+      <img src="images/logo.jpeg" alt="Droplets Logo" class="logo-img" />
+      <div class="logo">DROPLETS</div>
+    </div>
+    <nav class="nav-icons" id="navLinks">
       <a href="index.html">🏠 Home</a>
+      <a href="collection.html">🛍️ Collection</a>
     </nav>
+    <button id="menuToggle" class="menu-toggle">☰</button>
   </header>
 
+  <!-- Main Checkout Content -->
   <main style="padding: 2em;">
     <h2>Your Cart</h2>
-    <p>Item list and checkout logic goes here</p>
-    <button>Proceed to Payment</button>
+
+    <div class="checkout-container">
+      <!-- Cart items will be dynamically loaded here -->
+    </div>
+
+    <div class="checkout-summary">
+      <p><strong>Subtotal:</strong> <span id="subtotal">R0.00</span></p>
+      <button class="checkout-btn">Proceed to Payment</button>
+    </div>
   </main>
 
+  <script src="script.js"></script>
 </body>
 </html>

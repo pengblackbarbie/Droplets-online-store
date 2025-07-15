@@ -4,70 +4,124 @@
   <meta charset="UTF-8" />
   <title>Collection — Droplets</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <!-- Font Awesome CDN for icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+  
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <!-- Navbar -->
   <header class="navbar">
-    <div class="logo">DROPLETS</div>
-    <nav class="nav-icons">
-      <a href="index.html">🏠 Home</a>
-      <a href="checkout.html">🛒 Cart</a>
+    <div class="logo-container">
+      <img src="images/logo.jpeg" alt="Droplets Logo" class="logo-img" />
+      <div class="logo">DROPLETS</div>
+    </div>
+    <nav class="nav-icons" id="navLinks">
+      <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+      <a href="collection.html"><i class="fa-solid fa-bag-shopping"></i> Collection</a>
+      <a href="sale.html"><i class="fa-solid fa-fire"></i> Sale</a>
+      <a href="product.html"><i class="fa-solid fa-shirt"></i> Product</a>
+      <a href="checkout.html"><i class="fa-solid fa-cart-shopping"></i> Cart <span id="cart-count">0</span></a>
+      <a href="extras.html"><i class="fa-solid fa-file-lines"></i> Extras</a>
     </nav>
+    <button id="menuToggle" class="menu-toggle">☰</button>
   </header>
 
   <!-- Page Header -->
   <section style="padding: 2em;">
-    <h2>🛍️ Collection</h2>
+    <h2>Collection</h2>
 
     <!-- Filters (static for now) -->
-    <div class="filters" style="margin: 1em 0;">
-      <label>Sort by:</label>
-      <select>
-        <option value="newest">Newest</option>
-        <option value="price-low">Price: Low to High</option>
-        <option value="price-high">Price: High to Low</option>
-        <option value="trending">Trending</option>
-      </select>
+    <div class="filters">
+  <label for="sortSelect">Sort by:</label>
+  <select id="sortSelect" class="filter-select">
+    <option value="newest">Newest</option>
+    <option value="price-low">Price: Low to High</option>
+    <option value="price-high">Price: High to Low</option>
+    <option value="trending">Trending</option>
+  </select>
 
-      <label style="margin-left: 1em;">Filter:</label>
-      <select>
-        <option value="all">All</option>
-        <option value="streetwear">Streetwear</option>
-        <option value="footwear">Footwear</option>
-        <option value="newdrops">New Drops</option>
-      </select>
-    </div>
+  <label for="categorySelect">Filter:</label>
+  <select id="categorySelect" class="filter-select">
+    <option value="all">All</option>
+    <option value="streetwear">Streetwear</option>
+    <option value="footwear">Footwear</option>
+    <option value="accessories">Accessories</option>
+    <option value="newdrops">New Drops</option>
+  </select>
+</div>
+
 
     <!-- Product Grid -->
     <div class="tile-grid">
-      <a href="product.html" class="tile">
-        <img src="assets/product1.jpg" alt="Drip Hoodie" />
-        <span>Drip Hoodie — R799</span>
-      </a>
-      <a href="product.html" class="tile">
-        <img src="assets/product2.jpg" alt="Urban Jacket" />
-        <span>Urban Jacket — R1199</span>
-      </a>
-      <a href="product.html" class="tile">
-        <img src="assets/product3.jpg" alt="Chunky Sneakers" />
-        <span>Chunky Sneakers — R950</span>
-      </a>
-      <a href="product.html" class="tile">
-        <img src="assets/product4.jpg" alt="Ripped Denim" />
-        <span>Ripped Denim — R699</span>
-      </a>
-      <a href="product.html" class="tile">
-        <img src="assets/product5.jpg" alt="Street Cap" />
-        <span>Street Cap — R250</span>
-      </a>
-    </div>
+  <div class="tile" data-category="streetwear" data-price="799" data-name="Drip Hoodie">
+    <img src="images/logo.jpeg" alt="Drip Hoodie" />
+    <span>Drip Hoodie — R799</span>
+    <button 
+      class="add-to-cart" 
+      data-name="Drip Hoodie" 
+      data-price="799" 
+      data-image="https://via.placeholder.com/300x300?text=Drip+Hoodie"
+    >Add to Cart</button>
+  </div>
+
+  <div class="tile" data-category="streetwear" data-price="1199" data-name="Urban Jacket">
+    <img src="images/logo.jpeg" alt="Urban Jacket" />
+    <span>Urban Jacket — R1199</span>
+    <button 
+      class="add-to-cart" 
+      data-name="Urban Jacket" 
+      data-price="1199" 
+      data-image="https://via.placeholder.com/300x300?text=Urban+Jacket"
+    >Add to Cart</button>
+  </div>
+
+  <div class="tile" data-category="footwear" data-price="950" data-name="Chunky Sneakers">
+    <img src="images/logo.jpeg" alt="Chunky Sneakers" />
+    <span>Chunky Sneakers — R950</span>
+    <button 
+      class="add-to-cart" 
+      data-name="Chunky Sneakers" 
+      data-price="950" 
+      data-image="https://via.placeholder.com/300x300?text=Chunky+Sneakers"
+    >Add to Cart</button>
+  </div>
+
+  <div class="tile" data-category="streetwear" data-price="699" data-name="Ripped Denim">
+    <img src="images/logo.jpeg" alt="Ripped Denim" />
+    <span>Ripped Denim — R699</span>
+    <button 
+      class="add-to-cart" 
+      data-name="Ripped Denim" 
+      data-price="699" 
+      data-image="https://via.placeholder.com/300x300?text=Ripped+Denim"
+    >Add to Cart</button>
+  </div>
+
+  <div class="tile" data-category="accessories" data-price="250" data-name="Street Cap">
+    <img src="images/logo.jpeg" alt="Street Cap" />
+    <span>Street Cap — R250</span>
+    <button 
+      class="add-to-cart" 
+      data-name="Street Cap" 
+      data-price="250" 
+      data-image="https://via.placeholder.com/300x300?text=Street+Cap"
+    >Add to Cart</button>
+  </div>
+</div>
+
   </section>
 
   <footer class="site-footer">
     <p>&copy; 2025 Droplets. All rights reserved.</p>
   </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
+
