@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Product — Droplets</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">DROPLETS</div>
+    <nav class="nav-icons">
+      <a href="index.html">🏠 Home</a>
+      <a href="checkout.html">🛒 Cart</a>
+    </nav>
+  </header>
+
+  <!-- Product Section -->
+  <main class="product-page">
+    <div class="product-container">
+      <!-- Product Image -->
+      <div class="product-image">
+        <img src="assets/product-main.jpg" alt="Product Name" />
+      </div>
+
+      <!-- Product Info -->
+      <div class="product-details">
+        <h1>Drip Hoodie</h1>
+        <p class="product-price">R799</p>
+
+        <label for="size">Size:</label>
+        <select id="size" required>
+          <option value="">Select Size</option>
+          <option value="S">Small</option>
+          <option value="M">Medium</option>
+          <option value="L">Large</option>
+        </select>
+
+        <label for="color">Color:</label>
+        <select id="color" required>
+          <option value="">Select Color</option>
+          <option value="black">Black</option>
+          <option value="white">White</option>
+          <option value="beige">Beige</option>
+        </select>
+
+        <div class="buttons">
+          <button class="add-to-cart">Add to Cart</button>
+          <button class="buy-now">Buy Now</button>
+        </div>
+
+        <p class="product-note"><em>Seen on TikTok — trending item of the week!</em></p>
+      </div>
+    </div>
+
+    <!-- Product Description -->
+    <section class="product-description">
+      <h3>Description</h3>
+      <p>
+        The Drip Hoodie is made from premium fleece cotton with an oversized cut. Soft feel, sharp design — made for flexing on the daily.
+      </p>
+
+      <h3>Outfit Tips</h3>
+      <p>
+        Style it with ripped jeans and chunky sneakers. Add a cross-body bag and you’re street-ready.
+      </p>
+    </section>
+
+    <!-- Bundle Suggestion -->
+    <section class="bundle-suggestion">
+      <h3>Style It With</h3>
+      <div class="tile-grid">
+        <a href="product.html" class="tile">
+          <img src="assets/bundle-jeans.jpg" alt="Ripped Jeans" />
+          <span>Ripped Jeans — R699</span>
+        </a>
+        <a href="product.html" class="tile">
+          <img src="assets/bundle-sneakers.jpg" alt="Chunky Sneakers" />
+          <span>Chunky Sneakers — R950</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 Droplets. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
