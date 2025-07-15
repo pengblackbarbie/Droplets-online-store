@@ -1,3 +1,12 @@
+document.addEventListener("DOMContentLoaded", function () {
+  const toggleBtn = document.getElementById("menuToggle");
+  const navLinks = document.getElementById("navLinks");
+
+  toggleBtn.addEventListener("click", function () {
+    navLinks.classList.toggle("active");
+  });
+});
+
 // Cart counter
 let cartCount = 0;
 const cartCounter = document.getElementById("cart-count");
